@@ -1,0 +1,198 @@
+{
+  "wheat": {
+    "TbaseCrop": {
+      "description": "base temperature",
+      "unit": "\u00b0C",
+      "min": -1,
+      "max": 5,
+      "value": 1,
+      "calibration": true
+    },
+    "ToptCrop": {
+      "description": "optimum temperature",
+      "unit": "\u00b0C",
+      "min": 20,
+      "max": 28,
+      "value": 24,
+      "calibration": false
+    },
+    "TmaxCrop": {
+      "description": "maximum temperature",
+      "unit": "\u00b0C",
+      "min": 32,
+      "max": 37,
+      "value": 35,
+      "calibration": false
+    },
+    "CycleLength": {
+      "description": "crop cycle length",
+      "unit": "degree days",
+      "min": 800,
+      "max": 3000,
+      "value": 2500,
+      "calibration": true
+    },
+    "FloweringStart": {
+      "description": "percentage for flowering",
+      "unit": "% crop cycle",
+      "min": 50,
+      "max": 85,
+      "value": 50,
+      "calibration": true
+    },
+    "HalfIntGrowth": {
+      "description": "light interception growth",
+      "unit": "unitless",
+      "min": 20,
+      "max": 35,
+      "value": 25,
+      "calibration": true
+    },
+    "HalfIntSenescence": {
+      "description": "light interception senescence",
+      "unit": "unitless",
+      "min": 50,
+      "max": 99,
+      "value": 70,
+      "calibration": true
+    },
+    "SlopeGrowth": {
+      "description": "slope growth phase",
+      "unit": "unitless",
+      "min": 0.001,
+      "max": 0.02,
+      "value": 0.01,
+      "calibration": true
+    },
+    "SlopeSenescence": {
+      "description": "slope senescence phase",
+      "unit": "unitless",
+      "min": 0.001,
+      "max": 0.07,
+      "value": 0.01,
+      "calibration": true
+    },
+    "RadiationUseEfficiency": {
+      "description": "radiation use efficiency",
+      "unit": "g MJ-1",
+      "min": 1,
+      "max": 3.5,
+      "value": 3,
+      "calibration": false
+    },
+    "PartitioningMaximum": {
+      "description": "maximum partitioning",
+      "unit": "unitless",
+      "min": 0.8,
+      "max": 1,
+      "value": 1,
+      "calibration": true
+    },
+    "VarietalResistance": {
+      "description": "varietal resistance",
+      "unit": "unitless",
+      "min": 0,
+      "max": 1,
+      "value": 0,
+      "calibration": false
+    }
+  },
+  "rice": {
+    "TbaseCrop": {
+      "description": "base temperature",
+      "unit": "\u00b0C",
+      "min": 8,
+      "max": 13,
+      "value": 10,
+      "calibration": true
+    },
+    "ToptCrop": {
+      "description": "optimum temperature",
+      "unit": "\u00b0C",
+      "min": 26,
+      "max": 29,
+      "value": 27,
+      "calibration": true
+    },
+    "TmaxCrop": {
+      "description": "maximum temperature",
+      "unit": "\u00b0C",
+      "min": 35,
+      "max": 40,
+      "value": 37,
+      "calibration": true
+    },
+    "CycleLength": {
+      "description": "crop cycle length",
+      "unit": "degree days",
+      "min": 800,
+      "max": 3000,
+      "value": 1800,
+      "calibration": true
+    },
+    "FloweringStart": {
+      "description": "percentage for flowering",
+      "unit": "% crop cycle",
+      "min": 50,
+      "max": 85,
+      "value": 50,
+      "calibration": true
+    },
+    "HalfIntGrowth": {
+      "description": "light interception growth",
+      "unit": "unitless",
+      "min": 20,
+      "max": 35,
+      "value": 25,
+      "calibration": true
+    },
+    "HalfIntSenescence": {
+      "description": "light interception senescence",
+      "unit": "unitless",
+      "min": 50,
+      "max": 99,
+      "value": 70,
+      "calibration": true
+    },
+    "SlopeGrowth": {
+      "description": "slope growth phase",
+      "unit": "unitless",
+      "min": 0.001,
+      "max": 0.02,
+      "value": 0.01,
+      "calibration": true
+    },
+    "SlopeSenescence": {
+      "description": "slope senescence phase",
+      "unit": "unitless",
+      "min": 0.001,
+      "max": 0.07,
+      "value": 0.01,
+      "calibration": true
+    },
+    "RadiationUseEfficiency": {
+      "description": "radiation use efficiency",
+      "unit": "g MJ-1",
+      "min": 1,
+      "max": 3.5,
+      "value": 3,
+      "calibration": true
+    },
+    "PartitioningMaximum": {
+      "description": "maximum partitioning",
+      "unit": "unitless",
+      "min": 0.8,
+      "max": 1,
+      "value": 1,
+      "calibration": true
+    },
+    "VarietalResistance": {
+      "description": "varietal resistance",
+      "unit": "unitless",
+      "min": 0,
+      "max": 1,
+      "value": 0,
+      "calibration": false
+    }
+  }
+}

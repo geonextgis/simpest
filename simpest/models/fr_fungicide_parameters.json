@@ -1,0 +1,52 @@
+{
+  "protectant": {
+    "InitialDose": {
+      "description": "initial fungicide dose",
+      "unit": "fraction",
+      "min": 0,
+      "max": 1,
+      "value": 1,
+      "calibration": false
+    },
+    "DegradationRate": {
+      "description": "rate of degradation",
+      "unit": "unitless",
+      "min": 0.01,
+      "max": 0.15,
+      "value": 0.01,
+      "calibration": false
+    },
+    "TenacityFactor": {
+      "description": "tenacity factor",
+      "unit": "unitless",
+      "min": 0.1,
+      "max": 0.25,
+      "value": 0.25,
+      "calibration": false
+    },
+    "InitialEfficacy": {
+      "description": "initial efficacy",
+      "unit": "unitless",
+      "min": 0.5,
+      "max": 1,
+      "value": 1,
+      "calibration": false
+    },
+    "AShapeParameter": {
+      "description": "empirical parameter",
+      "unit": "unitless",
+      "min": 3,
+      "max": 5,
+      "value": 4,
+      "calibration": false
+    },
+    "BShapeParameter": {
+      "description": "empirical parameter",
+      "unit": "unitless",
+      "min": 7,
+      "max": 10,
+      "value": 8.5,
+      "calibration": false
+    }
+  }
+}
