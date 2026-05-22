@@ -4,7 +4,7 @@ from pathlib import Path
 import pandas as pd
 import simplace
 
-from models.franchestyn import (
+from simpest.models.franchestyn import (
     FranchestynConfig,
     build_season_summary,
     run_franchestyn,
@@ -12,7 +12,7 @@ from models.franchestyn import (
     save_season_summary_csv,
     save_simulation_results_csv,
 )
-from models.simplace import (
+from simpest.models.simplace import (
     SimplaceConfig,
     build_management,
     convert_weather,
