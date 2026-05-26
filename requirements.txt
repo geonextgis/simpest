@@ -4,4 +4,3 @@ simplace
 seaborn
 matplotlib
 scipy
-geedim
