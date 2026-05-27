@@ -83,4 +83,4 @@ nav:
         - examples/intro.ipynb
     - API Reference:
           - simpest module: simpest.md
-          - common module: common.md
+        #   - common module: common.md
