@@ -14,15 +14,42 @@ def run_pipeline(
     project_lines: list[int],
     shutdown_simplace: bool = False,
 ) -> dict:
-    """Run the full SIMPLACE -> FraNchEstYN pipeline.
+
+
+    """
+    Run the full SIMPLACE → FraNchEstYN pipeline.
+
+    This function initializes and runs a SIMPLACE simulation, prepares the required input files,
+    and then runs the FraNchEstYN model using the outputs from SIMPLACE. It saves all intermediate
+    and final results to disk and returns paths and results for further analysis.
 
     Parameters
     ----------
-    shutdown_simplace : bool
-        If True, calls ``simplace.shutDown(shell)`` in ``finally``.
-        Keep this False in Jupyter to avoid possible kernel restarts when
-        the underlying JVM is terminated.
+    simplace_config : simplace_mod.SimplaceConfig
+        Configuration object for SIMPLACE (install, work, output, solution, project paths).
+    franchestyn_config : franchestyn_mod.FranchestynConfig
+        Configuration object for FraNchEstYN (reference, crop, disease, site, etc.).
+    project_lines : list of int
+        List of project line indices to run in SIMPLACE (usually [1]).
+    shutdown_simplace : bool, optional (default=False)
+        If True, shuts down the SIMPLACE JVM after running (not recommended in Jupyter).
+
+    Returns
+    -------
+    dict
+        Dictionary with keys:
+            - 'work_root': Path to SIMPLACE work directory used
+            - 'output_root': Path to SIMPLACE output directory used
+            - 'project_row': Project row dictionary used for the run
+            - 'merged_csv': Path to merged output CSV (SIMPLACE + FraNchEstYN)
+            - 'result': Full FraNchEstYN result dictionary
+            - 'simplace_shutdown': Whether SIMPLACE was shut down
+
+    Raises
+    ------
+    Any exception raised by SIMPLACE or FraNchEstYN will propagate unless handled internally.
     """
+
     shell = simplace_mod.init_simplace(simplace_config)
     try:
         simplace_mod.run_simplace(shell, simplace_config, project_lines=project_lines)
