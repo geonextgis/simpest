@@ -23,21 +23,18 @@ def run_pipeline(
     and then runs the FraNchEstYN model using the outputs from SIMPLACE. It saves all intermediate
     and final results to disk and returns paths and results for further analysis.
 
-    Parameters
-    ----------
-    simplace_config : simplace_mod.SimplaceConfig
-        Configuration object for SIMPLACE (install, work, output, solution, project paths).
-    franchestyn_config : franchestyn_mod.FranchestynConfig
-        Configuration object for FraNchEstYN (reference, crop, disease, site, etc.).
-    project_lines : list of int
-        List of project line indices to run in SIMPLACE (usually [1]).
-    shutdown_simplace : bool, optional (default=False)
-        If True, shuts down the SIMPLACE JVM after running (not recommended in Jupyter).
+    Args:
+        simplace_config (simplace_mod.SimplaceConfig):
+            Configuration object for SIMPLACE (install, work, output, solution, project paths).
+        franchestyn_config (franchestyn_mod.FranchestynConfig):
+            Configuration object for FraNchEstYN (reference, crop, disease, site, etc.).
+        project_lines (list of int):
+            List of project line indices to run in SIMPLACE (usually [1]).
+        shutdown_simplace (bool, optional):
+            If True, shuts down the SIMPLACE JVM after running (not recommended in Jupyter). Default is False.
 
-    Returns
-    -------
-    dict
-        Dictionary with keys:
+    Returns:
+        dict: Dictionary with keys:
             - 'work_root': Path to SIMPLACE work directory used
             - 'output_root': Path to SIMPLACE output directory used
             - 'project_row': Project row dictionary used for the run
@@ -45,9 +42,8 @@ def run_pipeline(
             - 'result': Full FraNchEstYN result dictionary
             - 'simplace_shutdown': Whether SIMPLACE was shut down
 
-    Raises
-    ------
-    Any exception raised by SIMPLACE or FraNchEstYN will propagate unless handled internally.
+    Raises:
+        Exception: Any exception raised by SIMPLACE or FraNchEstYN will propagate unless handled internally.
     """
 
     shell = simplace_mod.init_simplace(simplace_config)
