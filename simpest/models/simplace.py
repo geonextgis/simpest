@@ -6,7 +6,13 @@ from pathlib import Path
 
 import jpype
 import pandas as pd
+
 import simplace
+def get_simplace_directories(shell):
+    """
+    Wrapper for simplace.getSimplaceDirectories to avoid exposing simplace in notebooks.
+    """
+    return simplace.getSimplaceDirectories(shell)
 
 
 _SIMPLACE_INSTANCE = None
